@@ -57,7 +57,7 @@ module JekyllOptionalFrontMatter
 
     # Jekyll::Collections to convert Jekyll::StaticFiles to Jekyll::Documents
     def collections_to_convert
-      site.collections.reject { |k, _| !Jekyll::CollectionReader::SPECIAL_COLLECTIONS.include?(k) }
+      site.collections.reject { |k, _| Jekyll::CollectionReader::SPECIAL_COLLECTIONS.include?(k) }
     end
 
     # Given a Jekyll::Collection, read Jekyll::StaticFile as Jekyll::Document
